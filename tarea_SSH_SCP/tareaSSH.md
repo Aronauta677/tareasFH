@@ -5,8 +5,8 @@
 1. Creamos las clonaciones de nuestras máquinas y configuramos los puertos de red:
    - Máquina A: puerto `2222`
    - Máquina B: puerto `2223`
-> [!NOTE]
-> ! [nombrefoto] (imagenes/nombrefoto.png)
+> ! [nombrefoto] (imagenes/1.png)
+> ! [nombrefoto] (imagenes/2.png)
 
 2. Nos conectamos por **SSH** a las dos máquinas.
 
