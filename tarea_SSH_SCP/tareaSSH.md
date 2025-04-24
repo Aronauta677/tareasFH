@@ -57,16 +57,14 @@
 
 ![Decimocuarto](imagenes/14.png)
 ![Decimoquinto](imagenes/15.png)
+![Captura que se me olvido en clase](imagenes/olvidada.png)
+
 
 
 ## Autenticación por Clave SSH
 
-- Generamos un **par de claves SSH** en el cliente.
+- Generamos un par de claves en el cliente y hacemos la conexión con el servidor. Creamos el passphrase = servidorssh. Luego nos conectamos desde Alex a Brais con la clave de “servidorssh”.
 
 ![Decimosexto](imagenes/16.png)
-
-- Establecemos el passphrase: `servidorssh`.
-
 ![Decimoséptimo](imagenes/17.png)
-
-- Conectamos desde el usuario `Alex` en A hacia `Brais` en B usando la clave con passphrase `servidorssh`.
+![Decimoctava](imagenes/18.png)
