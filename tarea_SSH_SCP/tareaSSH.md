@@ -43,17 +43,17 @@
 
 ![Novena](imagenes/9.png)
 
-3. En la máquina **B**, creamos el directorio `prueba2` con el archivo `prueba2.txt` en su ruta temporal y lo enviamos a la A.
+2. En la máquina **B**, creamos el directorio `prueba2` con el archivo `prueba2.txt` en su ruta temporal y lo enviamos a la A.
 
 ![Décima](imagenes/10.png)
 
-5. Transmitimos los directorios `prueba` y `prueba2` al ordenador anfitrión. Ejecutamos los comandos necesarios desde la máquina anfitrión.
+3. Transmitimos los directorios `prueba` y `prueba2` al ordenador anfitrión. Ejecutamos los comandos necesarios desde la máquina anfitrión.
 
 ![Undécimo](imagenes/11.png)
 ![Duodécimo](imagenes/12.png)
 ![Decimotercero](imagenes/13.png)
 
-7. Creamos el directorio `prueba3` en el servidor con **200 archivos .txt** y lo transmitimos al escritorio del anfitrión.
+4. Creamos el directorio `prueba3` en el servidor con **200 archivos .txt** y lo transmitimos al escritorio del anfitrión.
 
 ![Decimocuarto](imagenes/14.png)
 ![Decimoquinto](imagenes/15.png)
