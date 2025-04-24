@@ -66,5 +66,5 @@
 - Generamos un par de claves en el cliente y hacemos la conexión con el servidor. Creamos el passphrase = servidorssh. Luego nos conectamos desde Alex a Brais con la clave de “servidorssh”.
 
 ![Decimosexto](imagenes/16.png)
-![Decimoséptimo](imagenes/17.png)
-![Decimoctava](imagenes/18.png)
+![Captura que se me olvido en clase 2](imagenes/olvidada2.png)
+![Decimonovena](imagenes/19.png)
