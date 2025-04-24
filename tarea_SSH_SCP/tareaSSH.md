@@ -43,7 +43,7 @@
 
 ![Novena](imagenes/9.png)
 
-3. En la máquina **B**, creamos el directorio `prueba2` con el archivo `prueba2.txt` en su ruta temporal y lo enviamos al cliente A.
+3. En la máquina **B**, creamos el directorio `prueba2` con el archivo `prueba2.txt` en su ruta temporal y lo enviamos a la A.
 
 ![Décima](imagenes/10.png)
 
