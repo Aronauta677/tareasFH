@@ -118,11 +118,14 @@ sudo sudo netplan apply
 sudo nmcli con add type ethernet ifname enp0s8 con-name intnet-b ip4 192.168.100.3/24
 ```
 
+![Catorce](imagenes/B1.png)
+
 2. Activa la conexión:
 
 ```bash
 sudo nmcli con up intnet-b
 ```
+![Quince](imagenes/B2.png)
 
 ---
 
@@ -132,5 +135,8 @@ Reinicia ambas máquinas y verifica que:
 
 - La IP se mantiene tras el reinicio.
 - La conectividad entre ambas máquinas sigue funcionando mediante `ping`.
+
+![Dieciseis](imagenes/pingB.png)
+
 
 ---
