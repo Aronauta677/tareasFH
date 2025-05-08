@@ -10,7 +10,12 @@ Configurar una red interna entre dos máquinas virtuales utilizando IPs estátic
 
 Clona una máquina base utilizando **clonación enlazada** para crear dos nuevas máquinas virtuales.
 
+![Primera](imagenes/maquinaA.png)
+![Segunda](imagenes/clonacionenlazada.png)
+![Tercera](imagenes/maquinaB.png)
+
 ---
+
 
 ## Paso 2: Configurar los adaptadores de red
 
@@ -18,12 +23,114 @@ Clona una máquina base utilizando **clonación enlazada** para crear dos nuevas
 - Establece el modo de red como **Red Interna**.
 - Asigna un nombre, por ejemplo: `Netplan`.
 
+![Cuarta](imagenes/adaptador2A.png)
+
+![Quinta](imagenes/adaptador2B.png)
+
 ---
 
 ## Paso 3: Configurar las interfaces de red `enp0s8`
 
 ### En la Máquina A
 
+![Sexta](imagenes/sshA.png)
+
 ```bash
 sudo ip addr add 192.168.100.2/24 dev enp0s8
 sudo ip link set enp0s8 up
+```
+![Séptima](imagenes/IPsA.png)
+
+### En la Máquina B
+
+![Octava](imagenes/sshB.png)
+
+```bash
+sudo ip addr add 192.168.100.3/24 dev enp0s8
+sudo ip link set enp0s8 up
+```
+![Octava](imagenes/IPsB.png)
+
+---
+
+## Paso 4: Comprobar conectividad
+
+### Desde Máquina A hacia Máquina B
+
+```bash
+ping 192.168.100.3
+```
+![Novena](imagenes/pingA.png)
+
+
+### Desde Máquina B hacia Máquina A
+
+```bash
+ping 192.168.100.2
+```
+![Décima](imagenes/pingB.png)
+
+---
+
+## Paso 5: Hacer la configuración persistente
+
+### Máquina A: Usando Netplan
+
+1. Edita el archivo de configuración:
+
+```bash
+sudo nano /etc/netplan/01-netcfg.yaml
+```
+
+2. Añade el siguiente contenido:
+
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s8:
+      dhcp4: no
+      addresses: [192.168.100.2/24]
+```
+
+3. Ajusta los permisos:
+
+```bash
+sudo chmod 600 /etc/netplan/01-netcfg.yaml
+```
+![Once](imagenes/NetplanA.png)
+
+4. Aplica los cambios:
+
+```bash
+sudo netplan apply
+```
+
+
+---
+
+### Máquina B: Usando NetworkManager
+
+1. Crea la conexión:
+
+```bash
+sudo nmcli con add type ethernet ifname enp0s8 con-name intnet-b ip4 192.168.100.3/24
+```
+
+2. Activa la conexión:
+
+```bash
+sudo nmcli con up intnet-b
+```
+
+---
+
+## Paso 6: Verificación final
+
+Reinicia ambas máquinas y verifica que:
+
+- La IP se mantiene tras el reinicio.
+- La conectividad entre ambas máquinas sigue funcionando mediante `ping`.
+
+---
