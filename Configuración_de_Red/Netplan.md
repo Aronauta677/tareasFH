@@ -81,6 +81,7 @@ ping 192.168.100.2
 ```bash
 sudo nano /etc/netplan/01-netcfg.yaml
 ```
+![Once](imagenes/NetplanA.png)
 
 2. Añade el siguiente contenido:
 
@@ -93,20 +94,19 @@ network:
       dhcp4: no
       addresses: [192.168.100.2/24]
 ```
+![Doce](imagenes/infoNetplan.png)
 
 3. Ajusta los permisos:
 
 ```bash
 sudo chmod 600 /etc/netplan/01-netcfg.yaml
 ```
-![Once](imagenes/NetplanA.png)
-
-4. Aplica los cambios:
-
+  Y aplicamos los cambios
 ```bash
-sudo netplan apply
+sudo sudo netplan apply
 ```
 
+![Trece](imagenes/confNetplan.png)
 
 ---
 
